@@ -22,6 +22,8 @@ APSecBufferRef APSecGetPKS()
 #endif
 
 int main(int argc, char * argv[]) {
+    [MPAnalysisHelper enableCrashReporterService]; // USE MPAAS CRASH REPORTER
+
     @autoreleasepool {
         
 #ifdef HOTPATCHEXIST

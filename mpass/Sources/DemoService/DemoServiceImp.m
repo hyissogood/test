@@ -10,4 +10,13 @@
 
 @implementation DemoServiceImp
 
+- (void)start{
+    NSLog(@"start DemoService");
+}
+
+- (void)doTask{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"DemoService" message:nil delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
 @end

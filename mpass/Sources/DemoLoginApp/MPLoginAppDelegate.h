@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MPLoginAppDelegate : NSObject
+@interface MPLoginAppDelegate : NSObject <DTMicroApplicationDelegate>
 
 @end
 

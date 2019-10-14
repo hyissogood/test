@@ -7,7 +7,7 @@
 //
 
 #import "DemoViewController.h"
-
+#import "FirstViewController.h"
 @interface DemoViewController ()
 
 @end
@@ -25,7 +25,24 @@
     [label sizeToFit];
     label.center = CGPointMake(self.view.frame.size.width / 2, 0.4 * self.view.frame.size.height);
     [self.view addSubview:label];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    btn.frame = label.frame;
+    [self.view addSubview:btn];
 }
+
+- (void)btnClick{
+
+    
+    
+    [DTContextGet() startApplication:@"appLogin" params:@{} launchMode:kDTMicroApplicationLaunchModePushWithAnimation];
+
+    
+//    FirstViewController *vc = [[FirstViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 
 @end

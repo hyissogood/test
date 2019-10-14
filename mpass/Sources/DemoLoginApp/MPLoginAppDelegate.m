@@ -7,7 +7,37 @@
 //
 
 #import "MPLoginAppDelegate.h"
+#import "MPLoginViewController.h"
+@interface MPLoginAppDelegate ()
+
+@property (nonatomic, strong) MPLoginViewController* rootVC;
+
+@end
 
 @implementation MPLoginAppDelegate
+
+-(id)init{
+    if (self == [super init]) {
+        self.rootVC = [[MPLoginViewController alloc] init];
+        
+    }
+    
+    return self;
+}
+
+- (UIViewController *)rootControllerInApplication:(DTMicroApplication *)application
+{
+    return self.rootVC;
+}
+
+- (void)applicationDidFinishLaunching:(DTMicroApplication *)application
+{
+    
+}
+
+- (void)application:(DTMicroApplication *)application willResumeWithOptions:(NSDictionary *)launchOptions
+{
+    
+}
 
 @end
